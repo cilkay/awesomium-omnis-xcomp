@@ -28,8 +28,8 @@ To experience the Tech-Demo download the repo and follow the instructions.
     * AWESOMIUM\build\bin\awesomium.dll to deploy\bin\xcomp
     * AWESOMIUM\build\lib\awesomium.lib to include\lib
     * AWESOMIUM\include\Awesomium to include\awesomium
-    * C:\Users\Public\Documents\Awesomium SDK Samples\1.7.4.X\Awesomium\BuildSamples\common\js_delegate.h to src\js_delegate.h#
-    * C:\Users\Public\Documents\Awesomium SDK Samples\1.7.4.X\Awesomium\BuildSamples\common\method_dispatcher.h to src\method_dispatcher.h
+    * C:\Users\Public\Documents\Awesomium SDK Samples\1.7.4.X\Awesomium\BuildSamples\common\js_delegate.h to src\js_delegate.h
+    * C:\Users\Public\Documents\Awesomium SDK Samples\1.7.4.X\Awesomium\BuildSamples\common\method_dispatcher.h to src\method_dispatcher.h (this has been split into method_dispatcher.h and method_dispatcher.cpp)
     
 
 + Install the Omnis External SDK and copy the following files into the specified project directory:
