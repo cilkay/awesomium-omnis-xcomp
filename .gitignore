@@ -47,9 +47,6 @@ build
 /include/lib/awesomium.lib
 /include/awesomium/*
 !/include/awesomium/.gitkeep
-/src/method_dispatcher.h
-/src/js_delegate.h
-/src/method_dispatcher.cpp
 
 /tools/awesomium.dll
 /tools/awesomium_pak_utility.exe
