@@ -113,6 +113,17 @@ qlong WebBrowser::initWebView()
 {
 	OmnisTools::logToTrace("initWebView()");
 	
+	// awesomium.dll will welay load upon the following first usage. make
+	// sure the dependency directory is in the dll path.
+	HMODULE hWebLib = LoadLibrary("webLib.dll");
+    TCHAR szPath[MAX_PATH];
+	DWORD size = GetModuleFileName( hWebLib, szPath, MAX_PATH );
+    if (size) {
+		// truncate the .dll
+		szPath[size-4] = 0;
+		SetDllDirectory(szPath);
+	}
+
 	// Prüfen ob der WebCore bereits initialisiert wurde
 	mWebCore = Awesomium::WebCore::instance();
 	if (!mWebCore){

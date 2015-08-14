@@ -15,7 +15,7 @@ To experience the Tech-Demo download the repo and follow the instructions.
 
 #### Requirements
 
-+ Win 7
++ Win 7+
 + O$ 4.3.X Non-Unicode
 + Omnis Externals SDK for O$ 4.3.1
 + Awesomium 1.7.X SDK with C++ examples
@@ -28,15 +28,15 @@ To experience the Tech-Demo download the repo and follow the instructions.
     * AWESOMIUM\build\bin\awesomium.dll to deploy\bin\xcomp
     * AWESOMIUM\build\lib\awesomium.lib to include\lib
     * AWESOMIUM\include\Awesomium to include\awesomium
-    * C:\Users\Public\Documents\Awesomium SDK Samples\1.7.4.X\Awesomium\BuildSamples\common\js_delegate.h to src\js_delegate.h#
-    * C:\Users\Public\Documents\Awesomium SDK Samples\1.7.4.X\Awesomium\BuildSamples\common\method_dispatcher.h to src\method_dispatcher.h
+    * C:\Users\Public\Documents\Awesomium SDK Samples\1.7.X.Y\Awesomium\BuildSamples\common\js_delegate.h to src\js_delegate.h#
+    * C:\Users\Public\Documents\Awesomium SDK Samples\1.7.X.Y\Awesomium\BuildSamples\common\method_dispatcher.h to src\method_dispatcher.h
     
 
 + Install the Omnis External SDK and copy the following files into the specified project directory:
     * OMNISDK\LIBS\omnis.lib to include\lib
     * OMNISDK\COMPLIB to include\omnis
 
-+ Copy the contents of deploy\bin\xcomp into OMNIS431INSTALLDIR\xcomp
++ Copy the contents of deploy\bin\xcomp into OMNIS431INSTALLDIR\xcomp\webLib
 + Modify the files resources\testdebug.bat and testtrelease.bat to match your local installation
 + Start Visual Studio 2008 C++ and open the proj\webLib.vcproj file
 

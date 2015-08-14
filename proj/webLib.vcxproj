@@ -99,7 +99,7 @@
       </HeaderFileName>
     </Midl>
     <ClCompile>
-      <Optimization>MinSpace</Optimization>
+      <Optimization>Disabled</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <AdditionalIncludeDirectories>../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;iswin32;isXCOMPLIB;NO_STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -118,7 +118,7 @@
       <Culture>0x0809</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>awesomium.lib;omnis.lib;libiconv.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>awesomium.lib;omnis.lib;libiconv.lib;delayimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>../build/release/webLib.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\include\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -130,6 +130,7 @@
       </DataExecutionPrevention>
       <ImportLibrary>../build/release/webLib.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
+      <DelayLoadDLLs>awesomium.dll;libiconv.dll;libiconv2.dll</DelayLoadDLLs>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -174,7 +175,7 @@
       <Culture>0x0809</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>awesomium.lib;omnis.lib;libiconv.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>awesomium.lib;omnis.lib;libiconv.lib;delayimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ShowProgress>NotSet</ShowProgress>
       <OutputFile>../build/debug/webLib.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -188,6 +189,7 @@
       </DataExecutionPrevention>
       <ImportLibrary>../build/debug/webLib.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
+      <DelayLoadDLLs>awesomium.dll;libiconv.dll;libiconv2.dll</DelayLoadDLLs>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
