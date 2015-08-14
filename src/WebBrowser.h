@@ -22,6 +22,7 @@
 #include <Awesomium/DataPak.h>
 #include <Awesomium/JsArray.h>
 #include "WebViewListener.h"
+#include "WebMenuListener.h"
 #include "WebLoadListener.h"
 #include "WebDownloadListener.h"
 #include "method_dispatcher.h"
@@ -95,6 +96,7 @@ namespace WebLib {
 			Awesomium::WebView*			mWebView;
 			
 			WebViewListener*			mWebViewListener;
+			WebMenuListener*			mWebMenuListener;
 			WebLoadListener*			mWebLoadListener;
 			WebDownloadListener*		mWebDownloadListener;
 			MethodDispatcher			mMethodDispatcher;

@@ -510,6 +510,14 @@
 				RelativePath="..\src\WebViewListener.h"
 				>
 			</File>
+			<File
+				RelativePath="..\src\WebMenuListener.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\src\WebMenuListener.h"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>

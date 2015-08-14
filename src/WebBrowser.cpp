@@ -36,6 +36,7 @@ WebBrowser::WebBrowser(HWND pHWnd, Awesomium::WebSession* pWebSession)
 	mWebCore = 0;
 	mWebView = 0;
 	mWebViewListener = 0;
+	mWebMenuListener = 0;
 	mWebLoadListener = 0;
 	mWebDownloadListener = 0;
 	mInitCompleted = false;
@@ -225,6 +226,9 @@ void WebBrowser::setupWebView(){
 	if (!mWebViewListener){
 		mWebViewListener = new WebViewListener(mHWnd);
 	}
+	if (!mWebMenuListener) {
+		mWebMenuListener = new WebMenuListener(mHWnd);
+	}
 	if (!mWebLoadListener){
 		mWebLoadListener = new WebLoadListener(mHWnd);
 	}
@@ -236,6 +240,7 @@ void WebBrowser::setupWebView(){
 	mWebView -> set_sync_message_timeout(1600);
 	mWebView -> set_parent_window(mHWnd);
 	mWebView -> set_view_listener(mWebViewListener);
+	mWebView -> set_menu_listener(mWebMenuListener);
 	mWebView -> set_load_listener(mWebLoadListener);
 	mWebView -> set_download_listener(mWebDownloadListener);
 	mWebView -> set_js_method_handler(&mMethodDispatcher);
@@ -544,6 +549,11 @@ qlong WebBrowser::shutDownWebView() {
 	if (mWebViewListener) {
 		delete mWebViewListener;
 		mWebViewListener = 0;
+	}
+	
+	if (mWebMenuListener) {
+		delete mWebMenuListener;
+		mWebMenuListener = 0;
 	}
 
 	if (mWebLoadListener) {

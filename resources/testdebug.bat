@@ -1,9 +1,11 @@
 @echo off
 
 Rem Change the following
-set QUELLDIR=D:\dev\lang\test\datax-weblib\build\debug
-set ZIELDIR=D:\dev\sdk\omnis\os4314webview-demo\xcomp
+set QUELLDIR=C:\replace\with\your\path\awesomium-omnis-xcomp\build\debug
+set ZIELDIR=C:\Program Files (x86)\TigerLogic\OS4321\xcomp
 
-xcopy "%QUELLDIR%\webLib.dll" "%ZIELDIR%" /y
-xcopy "%QUELLDIR%\webLib.pdb" "%ZIELDIR%" /y
+xcopy /y "%QUELLDIR%\webLib.dll" "%ZIELDIR%"
+if %errorlevel% neq 0 exit /b %errorlevel%
+xcopy /y "%QUELLDIR%\webLib.pdb" "%ZIELDIR%"
+if %errorlevel% neq 0 exit /b %errorlevel%
 
