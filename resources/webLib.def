@@ -1,4 +1,4 @@
-LIBRARY         GENERIC
+LIBRARY         WEBLIB
 EXPORTS
     GenericWndProc  @1
  

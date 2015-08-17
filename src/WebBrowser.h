@@ -58,7 +58,7 @@ const qlong
 	evOnConsoleMessageAdded = 1110,
 	evOnDocumentReady = 1111,
 	evOnFrameLoadingFailed = 1112,
-	evOnTitelChange = 1113,
+	evOnTitleChange = 1113,
 	evOnAdressBarChanged = 1114,
 	evOnOpenNewWindow = 1115,
 	evOnDownloadRequest = 1116,

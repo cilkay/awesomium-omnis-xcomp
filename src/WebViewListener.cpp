@@ -24,7 +24,8 @@ using namespace WebLib;
 */
 WebViewListener::WebViewListener(HWND pHWnd)
 {
-	mHWnd = pHWnd;	// Ref auf das Fenster via hwnd
+	// Set a reference to the window via hwnd
+	mHWnd = pHWnd;
 }
 
 /*
@@ -40,12 +41,12 @@ void WebViewListener::OnChangeTitle(Awesomium::WebView* caller, const Awesomium:
 	eci->mParamFirst = 0; 
 	
 	// ECI mit Parametern befüllen 
-	EXTfldval _newTitel;
-	OmnisTools::getEXTFldValFromString(_newTitel,OmnisTools::getStringFromWebString(title));
-	ECOaddParam(eci,&_newTitel,0,0,0,1,0);  
+	EXTfldval _newTitle;
+	OmnisTools::getEXTFldValFromString(_newTitle,OmnisTools::getStringFromWebString(title));
+	ECOaddParam(eci,&_newTitle,0,0,0,1,0);  
 
 	// Send event to OMNIS 
-	qbool eventOk = ECOsendCompEvent( mHWnd, eci, evOnTitelChange, qtrue ); 
+	qbool eventOk = ECOsendCompEvent( mHWnd, eci, evOnTitleChange, qtrue ); 
 
 	// Delete parameters from EXTCompInfo structure 
 	ECOmemoryDeletion( eci ); 

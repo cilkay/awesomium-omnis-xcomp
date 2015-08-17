@@ -29,10 +29,11 @@ using namespace WebLib;
 */
 WebBrowser::WebBrowser(HWND pHWnd, Awesomium::WebSession* pWebSession)
 {
-	mHWnd = pHWnd;	// Ref auf das Fenster via hwnd
+	// Set a reference to the window via hwnd
+	mHWnd = pHWnd;
 	mWebSession = pWebSession;
 	
-	// Alle Werte des Objektes inialisieren 
+	// Initialize the object 
 	mWebCore = 0;
 	mWebView = 0;
 	mWebViewListener = 0;
@@ -72,7 +73,7 @@ WebBrowser::~WebBrowser()
 
 //////////////////////// Painting //////////////////////////////
 
-// You need to paint your control
+// Paint the control
 qbool WebBrowser::paint()
 {
 	WNDpaintStruct ps;
@@ -93,7 +94,7 @@ qbool WebBrowser::paint()
 	return qtrue;
 }
 
-// You need to paint your control
+// Paint the control
 qbool WebBrowser::update()
 {	
 	if (mWebCore){
@@ -113,8 +114,8 @@ qlong WebBrowser::initWebView()
 {
 	OmnisTools::logToTrace("initWebView()");
 	
-	// awesomium.dll will welay load upon the following first usage. make
-	// sure the dependency directory is in the dll path.
+	// 
+	// Make sure the dependency directory is in the dll path.
 	HMODULE hWebLib = LoadLibrary("webLib.dll");
     TCHAR szPath[MAX_PATH];
 	DWORD size = GetModuleFileName( hWebLib, szPath, MAX_PATH );
@@ -124,7 +125,7 @@ qlong WebBrowser::initWebView()
 		SetDllDirectory(szPath);
 	}
 
-	// Prüfen ob der WebCore bereits initialisiert wurde
+	// Check whether WebCore has already been initialized.
 	mWebCore = Awesomium::WebCore::instance();
 	if (!mWebCore){
 		OmnisTools::logToTrace("Webcore intializing");
@@ -274,7 +275,7 @@ void WebBrowser::setupWebView(){
 		EXTCompInfo* eci = new EXTCompInfo(); 
 		int test = 55;
 		eci->mParamFirst = 0; 
-		// ECI mit Parametern befüllen 
+		// Populate ECI with parameters
 		EXTfldval _errorCode;
 		OmnisTools::getEXTFldValFromInt(_errorCode,test);
 		ECOaddParam(eci,&_errorCode,0,0,0,1,0);  

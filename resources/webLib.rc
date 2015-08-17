@@ -42,7 +42,7 @@ BEGIN
 	7503					"ConsoleMessage:ConsoleMessage"
 	7504					"DocumentReady:DocumentReady"
 	7505					"FrameLoadingFailed:FrameLoadingFailed"
-	7506					"TitelChanged:TitelChanged"
+	7506					"TitleChanged:TitleChanged"
 	7507					"AdressBarChanged:AdressBarChanged"
 	7508					"OpenNewWindow:OpenNewWindow"
 	7509					"DownloadRequest:DownloadRequest"
@@ -74,7 +74,7 @@ BEGIN
 	8121					"errorMsg:ErrorMsg"
 	8122					"url:Url"
 	
-	8130					"newTitel:NewTitel"
+	8130					"newTitle:NewTitle"
 
 	8140					"newUrl:NewUrl"
 

@@ -58,3 +58,10 @@ build
 /include/lib/omnis.lib
 /lbs/temp
 /lbs/user
+
+/proj/ipch/*
+resources/Thumbs.db
+proj/webLib.opensdf
+proj/webLib.suo
+proj/webLib.sdf
+proj/webLib.suo

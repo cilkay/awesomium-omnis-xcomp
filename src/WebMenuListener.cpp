@@ -22,7 +22,8 @@ using namespace WebLib;
 */
 WebMenuListener::WebMenuListener(HWND pHWnd)
 {
-	mHWnd = pHWnd;	// Ref auf das Fenster via hwnd
+	// Set a reference to the window via hwnd
+	mHWnd = pHWnd;
 }
 
 /*

@@ -63,8 +63,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release - Non-Unicode|Win32'">../build/release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release - Non-Unicode|Win32'">../build/release\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release - Non-Unicode|Win32'">../build/release/$(PlatformName)/non-unicode\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release - Non-Unicode|Win32'">../build/release/$(PlatformName)/non-unicode\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release - Non-Unicode|Win32'">false</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug - Non-Unicode|Win32'">../build/debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug - Non-Unicode|Win32'">../build/debug\</IntDir>
@@ -106,10 +106,10 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>../build/release/webLib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>../build/release/</AssemblerListingLocation>
-      <ObjectFileName>../build/release/</ObjectFileName>
-      <ProgramDataBaseFileName>../build/release/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>../build/release/$(PlatformName)/non-unicode/webLib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>../build/release/$(PlatformName)/non-unicode\</AssemblerListingLocation>
+      <ObjectFileName>../build/release/$(PlatformName)/non-unicode\</ObjectFileName>
+      <ProgramDataBaseFileName>../build/release/$(PlatformName)/non-unicode\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </ClCompile>
@@ -119,25 +119,26 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>awesomium.lib;omnis.lib;libiconv.lib;delayimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../build/release/webLib.dll</OutputFile>
+      <OutputFile>../build/release/$(PlatformName)/non-unicode/webLib.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\include\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>../resources/webLib.def</ModuleDefinitionFile>
-      <ProgramDatabaseFile>../build/release/webLib.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>../build/release/$(PlatformName)/non-unicode/webLib.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
       <ImportLibrary>../build/release/webLib.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
-      <DelayLoadDLLs>awesomium.dll;libiconv.dll;libiconv2.dll</DelayLoadDLLs>
+      <DelayLoadDLLs>awesomium.dll;libiconv2.dll</DelayLoadDLLs>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <OutputFile>../build/release/webLib.bsc</OutputFile>
     </Bscmake>
     <PostBuildEvent>
-      <Command>$(ProjectDir)\..\resources\testrelease.bat</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug - Non-Unicode|Win32'">
